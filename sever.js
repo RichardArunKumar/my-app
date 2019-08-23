@@ -1,6 +1,9 @@
 //Install express server
 const express = require('express');
 const path = require('path');
+bodyParser = require('body-parser'),
+cros = require('cros');
+mongoose = require('mongoose');
 
 const app = express();
 
