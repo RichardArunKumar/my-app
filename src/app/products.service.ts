@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductsService {
-uri='http//localhost:4000/Products';
+uri='http://localhost:8080/products';
   constructor(private http:HttpClient) { }
 
   addProduct(ProductName, ProductDescription, ProductPrice) {  
@@ -14,8 +14,9 @@ uri='http//localhost:4000/Products';
       ProductDescription,  
       ProductPrice  
     };  
-    console.log(obj);
-    this.http.post(`$(this.uri)/add`,obj)
-    .subscribe(res => console.log('Done'));  
+    //console.log(obj);
+    //console.log(this.uri);
+     this.http.post( `${this.uri}/add`,obj)
+     .subscribe(res => console.log('Done'));  
   }
 }

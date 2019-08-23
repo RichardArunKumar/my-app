@@ -22,6 +22,7 @@ export class ProductAddComponent implements OnInit {
     });
   }
   addProduct(ProductName, ProductDescription, ProductPrice) {  
+    console.log(ProductName);
     this.ps.addProduct(ProductName, ProductDescription, ProductPrice);  
   }  
     
