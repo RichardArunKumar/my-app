@@ -11,11 +11,13 @@ res.send("working!");
 // Defined store route  
 productRoutes.route('/add').post(function (req, res) {  
   let product = new Product(req.body);  
+  //console.log(req.body);
   product.save()  
     .then(product => {  
       res.status(200).json({'Product': 'Product has been added successfully'});  
     })  
     .catch(err => {  
+      console.log(err);
     res.status(400).send("unable to save to database");  
     });  
 });  
