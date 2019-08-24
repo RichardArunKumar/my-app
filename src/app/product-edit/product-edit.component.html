@@ -39,7 +39,7 @@
           </div>  
         </div>  
         <div class="form-group">  
-          <button (click) = "updateProduct(ProductName.value, ProductDescription.value, ProductPrice.value)" type="submit" class="btn btn-primary"  
+          <button (click) = "updateProduct(ProductName.value, ProductDescription.value, ProductPrice.value, product._id)" type="submit" class="btn btn-primary"  
           [disabled]="angForm.invalid" >  
             Update Product  
           </button>  
